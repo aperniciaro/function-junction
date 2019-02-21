@@ -85,7 +85,7 @@ const isVowel = char => {
  */
 
 const rovarspraket = myString => {
-  let letters = myString.split()
+  let letters = myString.split('')
   for (let i = 0; i < letters.length; i++) {
     if (isVowel(letters[i]) === false) {
       letters.splice(i + 1, 0, 'o' + letters[i])
