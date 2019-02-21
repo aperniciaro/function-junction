@@ -4,14 +4,34 @@
  * construct available in Javascript.
  */
 
-// ...
+const max = (a, b) => {
+  if (a > b) {
+    return a
+  } else {
+    return b
+  }
+}
 
 /**
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
 
-// ...
+const maxOfThree = (a, b, c) => {
+  if (a > b) {
+    if (a > c) {
+      return a
+    } else {
+      return c
+    }
+  } else {
+    if (b > c) {
+      return b
+    } else {
+      return c
+    }
+  }
+}
 
 /*
  * Define a function sum() that takes two numbers as
