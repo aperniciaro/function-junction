@@ -38,21 +38,42 @@ const maxOfThree = (a, b, c) => {
  * arguments and computes the sum of those two numbers.
  */
 
-// ...
+const sum = (a, b) => {
+  return a + b
+}
 
 /*
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
 
-// ...
+const sumOfArray = arr => {
+  let sum = 0
+  for (let index = 0; index < arr.length; index++) {
+    sum += arr[index]
+  }
+  return sum
+}
 
 /**
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
 
-// ...
+const isVowel = char => {
+  const myChar = char.toLowerCase()
+  if (
+    myChar === 'a' ||
+    myChar === 'e' ||
+    myChar === 'i' ||
+    myChar === 'o' ||
+    myChar === 'u'
+  ) {
+    return true
+  } else {
+    return false
+  }
+}
 
 /**
  * Write a function rovarspraket() that will translate
@@ -63,7 +84,16 @@ const maxOfThree = (a, b, c) => {
  * return the string "tothohisos isos fofunon".
  */
 
-// ...
+const rovarspraket = myString => {
+  let letters = myString.split()
+  for (let i = 0; i < letters.length; i++) {
+    if (isVowel(letters[i]) === false) {
+      letters.splice(i + 1, 0, 'o' + letters[i])
+    } else {
+    }
+  }
+  return letters.join('')
+}
 
 /**
  * Define a function reverse() that computes
@@ -72,7 +102,13 @@ const maxOfThree = (a, b, c) => {
  * string "books".
  */
 
-// ...
+const reverse = myString => {
+  let revString = []
+  for (let i = myString.length; i >= 0; i--) {
+    revString.push(myString[i])
+  }
+  return revString
+}
 
 /**
  * Write a function findLongestWord() that takes an
@@ -81,7 +117,18 @@ const maxOfThree = (a, b, c) => {
  * i.e. findLongestWord("book dogs") should return "book"
  */
 
-// ...
+const findLongestWord = myString => {
+  const words = myString.split(' ')
+  let longest = 0
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] > words[i + 1]) {
+      longest = i
+    } else {
+      longest = i + 1
+    }
+  }
+  return words[longest]
+}
 
 /**
  * NOTE: Don't modify anything below this line...
