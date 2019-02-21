@@ -120,7 +120,7 @@ const reverse = myString => {
 const findLongestWord = myString => {
   const words = myString.split(' ')
   let longest = 0
-  for (let i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length - 1; i++) {
     if (words[i] > words[i + 1]) {
       longest = i
     } else {
