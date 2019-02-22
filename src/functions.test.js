@@ -133,7 +133,7 @@ const findLongestWord = myString => {
   const words = myString.split(' ')
   let longest = 0
   for (let i = 0; i < words.length - 1; i++) {
-    if (words[i] > words[i + 1]) {
+    if (words[i].length >= words[i + 1].length) {
       longest = i
     } else {
       longest = i + 1
