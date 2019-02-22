@@ -86,13 +86,25 @@ const isVowel = char => {
 
 const rovarspraket = myString => {
   let letters = myString.split('')
+  let rovar = []
   for (let i = 0; i < letters.length; i++) {
-    if (isVowel(letters[i]) === false) {
-      letters.splice(i + 1, 0, 'o' + letters[i])
+    if (
+      !(
+        letters[i] === 'a' ||
+        letters[i] === 'e' ||
+        letters[i] === 'i' ||
+        letters[i] === 'o' ||
+        letters[i] === 'u'
+      )
+    ) {
+      rovar.push(letters[i])
+      rovar.push('o')
+      rovar.push(letters[i])
     } else {
+      rovar.push(letters[i])
     }
   }
-  return letters.join('')
+  return rovar.join('')
 }
 
 /**
@@ -107,7 +119,7 @@ const reverse = myString => {
   for (let i = myString.length; i >= 0; i--) {
     revString.push(myString[i])
   }
-  return revString
+  return revString.join('')
 }
 
 /**
